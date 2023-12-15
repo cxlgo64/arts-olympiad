@@ -15,7 +15,7 @@ export const Commitment = () => {
       <article className=" text-center md:flex flex-col mr-10" >
         <Pm className="font-bold">ICAF</Pm>
         <H2m className="font-medium text-3xl md:text-4xl" >Our <span className="relative text-dark-blue">Commitment
-          <AnimatedScribble width={180} className="absolute -bottom-6 -right-20" />
+          <AnimatedScribble width={180} className="absolute -bottom-6 -right-20 stroke-new-blue" />
         </span>
         </H2m>
       </article>
@@ -32,7 +32,7 @@ export const Commitment = () => {
             <Pm className="font-sans font-light my-4">
             All of ICAF’s programs, festivals, and exhibitions are offered free of charge and are made possible through the support of empathic donors and creative sponsors.
             </Pm>
-            <ButtonStyledLink className="max-w-fit px-6 my-8" href="/sponsorship">
+            <ButtonStyledLink className="max-w-fit px-6 my-8" href="/sponsor">
             Learn more about becoming a sponsor
             </ButtonStyledLink>
           </div>

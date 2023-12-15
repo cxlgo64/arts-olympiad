@@ -6,10 +6,32 @@ import bulbIcon from "../../public/svgs/sponsor-svg/bulb-icon.svg";
 import medalIcon from "../../public/svgs/sponsor-svg/medal-icon.svg";
 
 export const Carousel = () => {
-  const [isChecked, setIsChecked] = useState(true);
+  const [isChecked1, setIsChecked1] = useState(false);
+  const [isChecked2, setIsChecked2] = useState(false);
+  const [isChecked3, setIsChecked3] = useState(true);
 
-  const checkHandler = () => {
-    setIsChecked(!isChecked);
+  const checkHandler1 = () => {
+    if (!isChecked1){
+      setIsChecked1(true);
+      setIsChecked2(false);
+      setIsChecked3(false);
+    }
+  };
+
+  const checkHandler2 = () => {
+    if (!isChecked2){
+      setIsChecked2(true);
+      setIsChecked1(false);
+      setIsChecked3(false);
+    }
+  };
+
+  const checkHandler3 = () => {
+    if (!isChecked3){
+      setIsChecked3(true);
+      setIsChecked1(false);
+      setIsChecked2(false);
+    }
   };
 
   return (
@@ -25,7 +47,7 @@ export const Carousel = () => {
                 Celebrate the Olympics!
               </span> 
             </div>
-            <ul className="mx-5% list-disc font-extralight text-lg leading-loose mb-24 md:mb-8">
+            <ul className="mx-5% list-disc font-light text-lg leading-loose mb-24 md:mb-8">
               <li className="pb-1">
                 Promote Olympism in your company and the Olympic values of excellence, friendship, and respect.
               </li>
@@ -51,7 +73,7 @@ export const Carousel = () => {
                 Brighten the Future!
               </span> 
             </div>
-            <ul className="mx-5% list-disc font-extralight text-lg leading-loose mb-24 md:mb-8">
+            <ul className="mx-5% list-disc font-light text-lg leading-loose mb-24 md:mb-8">
               <li className="pb-1">
                 Engage creative youth worldwide—a key demographic for long-term business growth.
               </li>
@@ -79,7 +101,7 @@ export const Carousel = () => {
               </span> 
             </div>
             
-            <ul className="mx-5% list-disc font-extralight text-lg leading-loose mb-24 md:mb-36">
+            <ul className="mx-5% list-disc font-light text-lg leading-loose mb-24 md:mb-36">
               <li className="pb-1">
                 Join the World Children's Festival—a celebration of creativity, diversity, and unity—with your company's "Pavilion," where creative activities and empathy training are held.
               </li>
@@ -98,10 +120,11 @@ export const Carousel = () => {
 
       <div className="realtive z-20 pt-28 pb-44 hidden lg:block m-auto max-w-screen-2xl px-8 md:px-12 lg:px-16 xl:px-20">
         <section className="relative">
+          <div></div>
           <div className="max-w-lg mx-auto relative">
-            <input id="article-01" type="radio" name="slider" className="sr-only peer/01" checked={isChecked} onChange={checkHandler}/>
-            <input id="article-02" type="radio" name="slider" className="sr-only peer/02" checked={isChecked} onChange={checkHandler}/>
-            <input id="article-03" type="radio" name="slider" className="sr-only peer/03" checked={isChecked} onChange={checkHandler}/>
+            <input id="article-01" type="checkbox" name="slider" className="sr-only peer/01" checked={isChecked1} onClick={checkHandler1}/>
+            <input id="article-02" type="checkbox" name="slider" className="sr-only peer/02" checked={isChecked2} onClick={checkHandler2}/>
+            <input id="article-03" type="checkbox" name="slider" className="sr-only peer/03" checked={isChecked3} onClick={checkHandler3}/>
 
             <div className="
               absolute inset-0 scale-[83.75%] z-20 transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)]                    
@@ -122,7 +145,7 @@ export const Carousel = () => {
                   <Image src={globleIcon} alt="" width={100} height={100} className="absolute left-1/2 transform -translate-x-1/2 w-[100px] h-[100px] -top-12" />
                   <h3 className="text-center font-medium text-3xl pt-10 pb-2">Make your mark on</h3> 
                   <h3 className="text-center font-medium text-3xl pb-2">The National Mall!</h3>                         
-                  <ul className="mx-5% list-disc font-extralight text-lg leading-loose my-4">
+                  <ul className="mx-5% list-disc font-light text-lg leading-loose my-4">
                     <li className="pb-1">
                       Join the World Children's Festival—a celebration of creativity, diversity, and unity—with your company's "Pavilion," where creative activities and empathy training are held.
                     </li>
@@ -156,7 +179,7 @@ export const Carousel = () => {
                 <div className="mx-5%">
                   <Image src={bulbIcon} alt="" width={100} height={100} className="absolute left-1/2 transform -translate-x-1/2 w-[100px] h-[100px] -top-12" />
                   <h3 className="text-center font-medium text-3xl pt-14">Brighten the Future!</h3>
-                  <ul className="mx-5% list-disc font-extralight text-lg leading-loose my-10">
+                  <ul className="mx-5% list-disc font-light text-lg leading-loose my-10">
                     <li className="pb-1">
                       Engage creative youth worldwide—a key demographic for long-term business growth.
                     </li>
@@ -189,7 +212,7 @@ export const Carousel = () => {
                 <div className="mx-5%">
                   <Image src={medalIcon} alt="" width={100} height={100} className="absolute left-1/2 transform -translate-x-1/2 w-[100px] h-[100px] -top-12" />
                   <h3 className="text-center font-medium text-3xl py-10">Celebrate the Olympics!</h3>
-                  <ul className="mx-5% list-disc font-extralight text-lg leading-loose">
+                  <ul className="mx-5% list-disc font-light text-lg leading-loose">
                     <li className="pb-1">
                       Promote Olympism in your company and the Olympic values of excellence, friendship, and respect.
                     </li>
