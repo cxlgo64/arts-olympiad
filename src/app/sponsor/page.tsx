@@ -3,7 +3,7 @@ import { sharedOpenGraph } from "../shared-metadata";
 import { SponsorBegin } from "../../../components/sponsor/SponsorBegin";
 import { Advantage } from "../../../components/sponsor/Advantage";
 import { Carousel } from "../../../components/sponsor/Carousel";
-import { Banner } from "../../../components/sponsor/Banner";
+import { Banner } from "../../../components/Banner";
 import { ContactUs } from "../../../components/sponsor/ContactUs";
 import { FiveDrop } from "../../../components/sponsor/FiveDrop";
 import orangeBlob from "../../../public/svgs/sponsor-svg/orangeblob.svg";
@@ -37,6 +37,7 @@ export default function sponsorPage() {
           {
             href: "#",
             text: "Learn more about becoming a sponsor",
+            icon: <></>,
             className: "bg-new-blue rounded text-center text-sm cursor-pointer tracking-wide text-neutral-white"
           }
         ]}
